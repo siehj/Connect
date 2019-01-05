@@ -1,7 +1,6 @@
 import React from 'react';
 
 const LandingNext = (props) => {
-  console.log(props);
   history.replaceState('without hash', 'without hash', '/')
   return (
     <div className="secondPart" >
