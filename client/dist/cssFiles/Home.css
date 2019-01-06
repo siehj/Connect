@@ -1,0 +1,55 @@
+
+.Home {
+  height: 100vh;
+  width: 100%;
+}
+
+.homeTop {
+  display: flex;
+  flex-direction: row;
+  height: 420px;
+}
+
+.topRight {
+  flex-direction: column;
+  width: 20%;
+  right: 2%;
+}
+
+.dashMapBox {
+  flex-direction: column;
+  width: 78%;
+}
+
+#dashMap {
+  width: 100%;
+  padding-top: 1%;
+}
+
+#dashMap path {
+  fill: #1A1A1A;
+}
+
+#clockBox {
+  border-bottom-color: #A08301;
+}
+
+#clock {
+  padding-top: 25%;
+  color: #A08301;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.quickLinks {
+  display: inline;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.quickLinks img {
+  height: 25px;
+  width: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
