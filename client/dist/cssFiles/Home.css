@@ -7,23 +7,28 @@
 .homeTop {
   display: flex;
   flex-direction: row;
-  height: 420px;
+  height: 380px;
 }
 
 .topRight {
   flex-direction: column;
-  width: 20%;
-  right: 2%;
+  width: 22%;
+  right: 1.5%;
 }
 
 .dashMapBox {
   flex-direction: column;
-  width: 78%;
+  width: 76%;
 }
 
 #dashMap {
   width: 100%;
-  padding-top: 1%;
+  padding-top: .5%;
+  text-align: center
+}
+
+#dashMap svg {
+  
 }
 
 #dashMap path {
@@ -32,12 +37,12 @@
 
 #clockBox {
   border-bottom-color: #A08301;
+  border-bottom-width: 2px;
 }
 
 #clock {
-  padding-top: 25%;
+  padding-top: 15%;
   color: #A08301;
-  font-size: 100px;
   font-weight: bold;
 }
 
@@ -52,4 +57,10 @@
   width: 25px;
   padding-left: 10px;
   padding-right: 10px;
+  cursor: pointer;
+}
+
+.homeCalendar {
+  padding-top: 12%;
+  color: white;
 }
