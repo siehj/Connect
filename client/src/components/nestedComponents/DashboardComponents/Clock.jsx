@@ -3,8 +3,8 @@ import { Clock, Box } from 'grommet';
 
 const DigitalClock = (props) => {
   return (
-    <Box align="center" justify="end" pad="small" >
-      <Clock type="digital" id="clock" />
+    <Box align="center" justify="end" pad="small" id="clockBox" border="bottom" >
+      <Clock size="xlarge" type="digital" id="clock" />
     </Box>
   )
 }

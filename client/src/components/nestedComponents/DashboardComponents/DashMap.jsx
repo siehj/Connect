@@ -15,8 +15,8 @@ class DashboardMap extends React.Component {
   render() {
     const { places } = this.state;
     return (
-      <Box >
-        <WorldMap id="dashMap" />
+      <Box className="dashMapBox" >
+        <WorldMap id="dashMap" alignSelf="center" />
       </Box>
     );
   }
