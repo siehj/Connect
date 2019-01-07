@@ -1,0 +1,23 @@
+
+#cardManager {
+  width: 100%;
+  height: inherit;
+}
+
+.cmTop {
+  /* background-color: #189988; */
+  /* background-color: #1899888c; */
+  height: 10%;
+  border-color: white;
+  width: inherit;
+  color: white;
+}
+
+.cmBottom {
+  /* background-color: #4d4d4d; */
+  /* background-color: #c7ba0b; */
+  border-color: white;
+  height: 80%;
+  width: inherit;
+}
+
