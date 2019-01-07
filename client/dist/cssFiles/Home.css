@@ -10,6 +10,14 @@
   height: 380px;
 }
 
+.homeBottom {
+  display: flex;
+  flex-direction: row;
+  /* background-color: #A08301; */
+  height: 40%;
+  margin-top: .5%;
+}
+
 .topRight {
   flex-direction: column;
   width: 22%;
@@ -27,10 +35,6 @@
   text-align: center
 }
 
-#dashMap svg {
-  
-}
-
 #dashMap path {
   fill: #1A1A1A;
 }
@@ -41,7 +45,7 @@
 }
 
 #clock {
-  padding-top: 15%;
+  padding-top: 14%;
   color: #A08301;
   font-weight: bold;
 }
@@ -61,6 +65,14 @@
 }
 
 .homeCalendar {
-  padding-top: 12%;
+  padding-top: 10%;
   color: white;
+}
+
+.bottoms {
+  flex-direction: column;
+  width: 35%;
+  padding-left: 1%;
+  padding-right: 1%;
+  height: 100%;
 }
