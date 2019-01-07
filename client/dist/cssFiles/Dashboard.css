@@ -62,3 +62,18 @@
   transition-timing-function: ease-in-out;
   transition-duration: .5s;
 }
+
+#logout {
+  bottom: 1%;
+  position: absolute;
+  border-color: white;
+  padding-top: 12px;
+  width: inherit;
+  color: red;
+}
+
+#logout img {
+  width: 30px;
+}
+
+
