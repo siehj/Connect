@@ -13,6 +13,7 @@ class Dashboard extends React.Component {
       displayAssistBar: false
     };
 
+    this.changeScreens = this.changeScreens.bind(this);
     this.toggleAssistBar = this.toggleAssistBar.bind(this);
   }
 
@@ -25,9 +26,8 @@ class Dashboard extends React.Component {
     })
   }
 
-  changeScreens(e) {
-    console.log(e.target.title);
-    this.setState({ screen : e.target.title });
+  changeScreens(name) {
+    this.setState({ screen : name });
   }
 
   render() {
@@ -35,7 +35,7 @@ class Dashboard extends React.Component {
       <Box id="dashboard" >
  
         <div className="navs" >
-          <NavBar toggle={this.toggleAssistBar} /> 
+          <NavBar toggle={this.toggleAssistBar} changeScreens={this.changeScreens} /> 
           <AssistBar />
         </div>
 
