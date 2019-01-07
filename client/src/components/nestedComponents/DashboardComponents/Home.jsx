@@ -6,6 +6,7 @@ import DashboardMap from './DashMap.jsx';
 import RangeCalendar from './Calendar.jsx';
 import PlottedChart from './PlotChart.jsx';
 import BarGraph from './BarGraph.jsx';
+import QuickTools from './QuickTools.jsx';
 
 const Home = (props) => {
   return (
@@ -32,8 +33,8 @@ const Home = (props) => {
         </Box>
       </Box>
       <Box className="homeBottom" >
-        <Box className="bottoms" >1</Box>
-        <Box className="bottoms" >2</Box>
+        <Box className="bottoms" ></Box>
+        <Box className="bottoms" ></Box>
         <Box className="bottoms" ><BarGraph /></Box>
       </Box>
     </Box>

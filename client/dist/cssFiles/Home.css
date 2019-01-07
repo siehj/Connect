@@ -76,3 +76,20 @@
   padding-right: 1%;
   height: 100%;
 }
+
+.quickToolsRows {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.qtIcon {
+  color: white;
+  border-color: white;
+  margin: 5px;
+}
+
+.qtIcon img {
+  width: 30px;
+  height: 30px;
+}
