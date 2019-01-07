@@ -3,7 +3,9 @@ import '../../../../dist/cssFiles/Home.css';
 import { Distribution, Box, Text } from 'grommet';
 import DigitalClock from './Clock.jsx';
 import DashboardMap from './DashMap.jsx';
-import RangeCalendar from './Calendar.jsx'
+import RangeCalendar from './Calendar.jsx';
+import PlottedChart from './PlotChart.jsx';
+import BarGraph from './BarGraph.jsx';
 
 const Home = (props) => {
   return (
@@ -29,7 +31,11 @@ const Home = (props) => {
           </Box>
         </Box>
       </Box>
-      {/* <h1>HOME</h1> */}
+      <Box className="homeBottom" >
+        <Box className="bottoms" >1</Box>
+        <Box className="bottoms" >2</Box>
+        <Box className="bottoms" ><BarGraph /></Box>
+      </Box>
     </Box>
   )
 }

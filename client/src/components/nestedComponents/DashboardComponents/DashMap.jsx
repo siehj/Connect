@@ -16,7 +16,7 @@ class DashboardMap extends React.Component {
     const { places } = this.state;
     return (
       <Box className="dashMapBox" >
-        <WorldMap id="dashMap" alignSelf="stretch" viewBox="-50 0 900 455" />
+        <WorldMap id="dashMap" alignSelf="stretch" viewBox="-60 0 900 455" />
       </Box>
     );
   }
