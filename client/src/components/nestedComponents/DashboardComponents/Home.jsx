@@ -1,12 +1,12 @@
 import React from 'react';
 import '../../../../dist/cssFiles/Home.css';
 import { Distribution, Box, Text } from 'grommet';
-import DigitalClock from './Clock.jsx';
-import DashboardMap from './DashMap.jsx';
-import RangeCalendar from './Calendar.jsx';
-import PlottedChart from './PlotChart.jsx';
-import BarGraph from './BarGraph.jsx';
-import QuickTools from './QuickTools.jsx';
+import DigitalClock from '../HomeComponents/Clock.jsx';
+import DashboardMap from '../HomeComponents/DashMap.jsx';
+import RangeCalendar from '../HomeComponents/Calendar.jsx';
+import PlottedChart from '../HomeComponents/PlotChart.jsx';
+import BarGraph from '../HomeComponents/BarGraph.jsx';
+import QuickTools from '../HomeComponents/QuickTools.jsx';
 
 const Home = (props) => {
   return (

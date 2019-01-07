@@ -25,6 +25,11 @@ class Dashboard extends React.Component {
     })
   }
 
+  changeScreens(e) {
+    console.log(e.target.title);
+    this.setState({ screen : e.target.title });
+  }
+
   render() {
     return (
       <Box id="dashboard" >
