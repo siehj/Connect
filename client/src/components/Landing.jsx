@@ -28,7 +28,7 @@ class Landing extends React.Component {
         <a id="slide" >
           <em id="connect" className="slide-bottom" >CONNECT</em>
         </a>
-        <Link to="/dashboard" >
+        <Link to="/login" >
           <Button id="getStarted" color={this.state.dark === true ?  'white' : 'rgb(160, 131, 1)' } label="Get Started" />
         </Link>
           {/* <em href="">/About</em>

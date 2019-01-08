@@ -105,13 +105,38 @@ svg {
   height: 600px;
   text-align: center;
   /* background-color: rgb(160, 131, 1); */
-  animation:color-change-5x 8s linear infinite alternate both;
 }
-@keyframes color-change-5x{0%{background:#19dcea}25%{background:#b22cff}50%{background:#ea2222}75%{background:#f5be10}100%{background:#3bd80d}}
 
 .secondSection {
   height: 600px;
   text-align: center;
   background-color: #1A1A1A;
+}
+
+#register {
+  height: 100vh;  
+  color: white;
+  animation:color-change-5x 8s linear infinite alternate both;
+}
+@keyframes color-change-5x{0%{background:#19dcea}25%{background:#b22cff}50%{background:#ea2222}75%{background:#f5be10}100%{background:#3bd80d}}
+
+#registerBox {
+  margin-top: 8%;
+  width: 32%;
+  height: 64%;
+  border-top: white;
+  border-top-style: solid;
+  border-bottom: white;
+  border-bottom-style: solid;
+  border-width: 5px;
+}
+
+#register h2 {
+  font-size: 45px;
+}
+
+.registerBtns {
+  padding: 15px;
+  /* font-size: 30px; */
 }
 
