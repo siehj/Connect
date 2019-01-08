@@ -24,8 +24,10 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="landing" >
-      <Box className="top" align="end" >
-        <em id="connect" className="slide-bottom" >CONNECT</em>
+      <Box className="top" >
+        <a id="slide" >
+          <em id="connect" className="slide-bottom" >CONNECT</em>
+        </a>
         <Link to="/dashboard" >
           <Button id="getStarted" color={this.state.dark === true ?  'white' : 'rgb(160, 131, 1)' } label="Get Started" />
         </Link>
@@ -33,7 +35,15 @@ class Landing extends React.Component {
             <br/> */}
           {/* <em href="">/How It Works</em> */}
       </Box>
-        <Map showMore={this.showMore} />
+        {/* <Map showMore={this.showMore} /> */}
+
+      <Box className="landingTop"  >
+      </Box>
+      <Box>
+        <a className="arrowHolder" onClick={this.showMore} data-scroll href="#firstSection" >
+          <div className="arrow"></div>
+        </a>
+      </Box>
         {
           this.state.showMore === true ? <LandingNext /> : null
         }
@@ -43,3 +53,8 @@ class Landing extends React.Component {
 }
 
 export default Landing;
+
+// IDEAS FOR BACKGROUND STUFF
+// https://codepen.io/ciprianionescu/pen/jbCnL
+// https://codepen.io/JonasBadalic/pen/cwEtH
+// 

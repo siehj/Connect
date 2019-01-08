@@ -16,10 +16,8 @@ class Map extends React.Component {
     const { places } = this.state;
     return (
       <Box >
-        <WorldMap id="map" />
-        <a onClick={this.props.showMore} data-scroll href="#firstSection" >
-          <div className="arrow"></div>
-        </a>
+        {/* <WorldMap id="map" /> */}
+        
       </Box>
     );
   }
