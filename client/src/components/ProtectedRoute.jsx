@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import '../../dist/cssFiles/loading.css';
+// import '../../dist/cssFiles/loading.css';
 
 class ProtectedRoute extends React.Component {
   constructor(props) {
