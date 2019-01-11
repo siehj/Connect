@@ -26,11 +26,10 @@ class Register extends React.Component {
   }
 
   updateField(e) {
-    console.log(e.target.value);
+    this.setState({ [`${e.target.name}`] : e.target.value }, () => console.log(this.state) );
   }
 
   render() {
-    console.log(this.state.screen)
     return (
       <Box id="register" direction="column">
         <Box alignSelf="center" direction="column" id="registerBox" >
@@ -40,8 +39,8 @@ class Register extends React.Component {
             :
             <Signup screen={this.state.screen} update={this.updateField} changeScreen={this.changeScreen} /> 
           }
-          <Box direction="row" alignSelf="center" pad="xsmall">
-            <Button size="large" className="registerBtns" primary="true"  >{ this.state.screen === 'login' ? "Login" : "Sign Up" } </Button>
+          <Box className="registerBottom" direction="row" alignSelf="center" pad="xsmall">
+            <Button size="large" className="registerBtns" primary="true" style={{ marginRight: "100px" }} >{ this.state.screen === 'login' ? "Login" : "Sign Up" } </Button>
             <Link to="/" >
               <Button size="large" className="registerBtns" primary="true" onClick={() => history.pushState({ goHome: 'true' }, "go home", "/")} >Cancel</Button> 
             </Link>
