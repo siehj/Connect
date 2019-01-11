@@ -10,10 +10,10 @@ const App = () => {
   return (
     <div>
       <Switch>
-        <Route exact path="/login" component={Register} />
-        <Route exact path="/signup" component={Register} />
+        {/* <Route exact path="/login" component={Register} /> */}
+        {/* <Route exact path="/signup" component={Register} /> */}
         <Route exact path="/" component={Landing} /> 
-        <ProtectedRoute path="/dashboard" component={Dashboard} />
+        {/* <ProtectedRoute path="/dashboard" component={Dashboard} /> */}
       </Switch>
     </div>
   )
