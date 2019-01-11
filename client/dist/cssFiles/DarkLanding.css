@@ -133,10 +133,13 @@ svg {
 
 #register h2 {
   font-size: 45px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .registerBtns {
   padding: 15px;
   /* font-size: 30px; */
 }
+
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../dist/cssFiles/DarkLanding.css';
-// import '../../dist/cssFiles/LightLanding.css';
 import Map from './nestedComponents/LandingComponents/Map.jsx';
 import LandingNext from './nestedComponents/LandingComponents/LandingNext.jsx';
 import { Box, Button } from 'grommet';
