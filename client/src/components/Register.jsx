@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { Box } from 'grommet';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
@@ -14,9 +15,10 @@ class Register extends React.Component {
       screen : 'login',
       username: '',
       firstname: '',
+      lastname: '',
       password: '',
-
     };
+    this.register = this.register.bind(this);
     this.updateField = this.updateField.bind(this);
     this.changeScreen = this.changeScreen.bind(this);
   }
@@ -26,7 +28,22 @@ class Register extends React.Component {
   }
 
   updateField(e) {
-    this.setState({ [`${e.target.name}`] : e.target.value }, () => console.log(this.state) );
+    this.setState({ [`${e.target.name}`] : e.target.value });
+  }
+
+  register() {
+    this.state.screen === 'login' ? 
+      axios.post('/api/login', {
+        username: this.state.username,
+        password: this.state.password
+      })
+    :
+      axios.post('/api/signup', {
+        username: this.state.username,
+        password: this.state.password,
+        firstname: this.state.firstname,
+        lastname: this.state.lastname
+      })
   }
 
   render() {
@@ -40,7 +57,7 @@ class Register extends React.Component {
             <Signup screen={this.state.screen} update={this.updateField} changeScreen={this.changeScreen} /> 
           }
           <Box className="registerBottom" direction="row" alignSelf="center" pad="xsmall">
-            <Button size="large" className="registerBtns" primary="true" style={{ marginRight: "100px" }} >{ this.state.screen === 'login' ? "Login" : "Sign Up" } </Button>
+            <Button size="large" className="registerBtns" primary="true" style={{ marginRight: "100px" }} onClick={this.register} >{ this.state.screen === 'login' ? "Login" : "Sign Up" } </Button>
             <Link to="/" >
               <Button size="large" className="registerBtns" primary="true" onClick={() => history.pushState({ goHome: 'true' }, "go home", "/")} >Cancel</Button> 
             </Link>
