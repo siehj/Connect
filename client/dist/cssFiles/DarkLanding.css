@@ -139,7 +139,35 @@ svg {
 
 .registerBtns {
   padding: 15px;
+  margin-right: 100px;
   /* font-size: 30px; */
 }
 
+.registerBottom {
+  bottom: 20%;
+  position: fixed;
+}
+
+.switchBtn {
+  bottom: 28%;
+  position: fixed;
+}
+
+.loginForm {
+  margin-top: 28%;
+}
+
+.loginIcons {
+  bottom: 39%;
+  position: fixed;
+}
+
+.loginIcons a {
+  margin-left: 60%;
+}
+
+.loginIcons img {
+  height: 40px;
+  cursor: pointer;
+}
 

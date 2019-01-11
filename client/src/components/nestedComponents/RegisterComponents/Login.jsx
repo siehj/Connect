@@ -9,35 +9,51 @@ import FormControl from '@material-ui/core/FormControl';
 
 const Login = (props) => {
   return(
-    <Box direction="column">
+    <Box direction="column" className="login" >
       <Box direction="row" alignSelf="center" > 
         <h2>Log In</h2>
       </Box>
-      <FormControl>
-        <InputLabel style={{ color : 'white' }} htmlFor="loginUser">Username</InputLabel>
-        <Input 
-          id="loginUser"
-          type='text'
-          onChange={props.update}
-          style={{ color : 'white' }}
-        />
-      </FormControl>
-      <FormControl >
-        <InputLabel style={{ color : 'white' }} htmlFor="loginPassword">Password</InputLabel>
+      <Box className="loginForm" >
+        <FormControl>
+          <InputLabel style={{ color : 'white' }} htmlFor="loginUser">Username</InputLabel>
           <Input 
-            id="loginPassword"
-            type='password'
+            id="loginUser"
+            type='text'
+            name="username"
             onChange={props.update}
             style={{ color : 'white' }}
           />
+        </FormControl><br/>
+        <FormControl >
+          <InputLabel style={{ color : 'white' }} htmlFor="loginPassword">Password</InputLabel>
+            <Input 
+              id="loginPassword"
+              type='password'
+              name="password"
+              onChange={props.update}
+              style={{ color : 'white' }}
+            />
         </FormControl>
-        <Box direction="row" alignSelf="center" >
-            {/* <Link to="/signup" > */}
-              <Button size="large" primary="true" onClick={() => props.changeScreen('signup')} >
-                I need to Sign Up!
-              </Button>
-            {/* </Link> */}
-          </Box>
+      </Box>
+      <Box className="loginIcons" direction="row" alignContent="center" >
+        <a>
+          {/* linked In */}
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAyMjQgMjI0IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNHYtMjI0aDIyNHYyMjR6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTM1Ljg0LDEzLjQ4Mzc1Yy0xNS41NDU2LDAgLTI2LjgzNjI1LDkuMzE1OTUgLTI2LjgzNjI1LDIyLjEyODc1YzAsMTIuODU3NiAxMS41NTk0NSwyMi41ODM3NSAyNi44MzYyNSwyMi41ODM3NWMxNS41NDU2LDAgMjYuODM2MjUsLTkuNDk1ODUgMjYuODM2MjUsLTIyLjg0NjI1Yy0wLjcxNjgsLTEyLjg1NzYgLTExLjc4MzQ1LC0yMS44NjYyNSAtMjYuODM2MjUsLTIxLjg2NjI1ek0xMy40NCw2Ny4yYy0yLjQ2NCwwIC00LjQ4LDIuMDE2IC00LjQ4LDQuNDh2MTI5LjkyYzAsMi40NjQgMi4wMTYsNC40OCA0LjQ4LDQuNDhoNDQuOGMyLjQ2NCwwIDQuNDgsLTIuMDE2IDQuNDgsLTQuNDh2LTEyOS45MmMwLC0yLjQ2NCAtMi4wMTYsLTQuNDggLTQuNDgsLTQuNDh6TTgwLjY0LDY3LjJjLTIuNDY0LDAgLTQuNDgsMi4wMTYgLTQuNDgsNC40OHYxMjkuOTJjMCwyLjQ2NCAyLjAxNiw0LjQ4IDQuNDgsNC40OGg0MC4zMmMyLjQ3Mjk2LDAgNC40OCwtMi4wMDcwNCA0LjQ4LC00LjQ4di02Ny4ydi0xLjEydi0xLjEyYzAsLTEwLjYxNzYgOC4xNTY0LC0xOS4yNjYxIDE4LjU1LC0yMC4wNzI1YzAuNTM3NiwtMC4wODk2IDEuMDcyNCwtMC4wODc1IDEuNjEsLTAuMDg3NWMwLjUzNzYsMCAxLjA3MjQsLTAuMDAyMSAxLjYxLDAuMDg3NWMxMC4zOTM2LDAuODA2NCAxOC41NSw5LjQ1NDkgMTguNTUsMjAuMDcyNXY2OS40NGMwLDIuNDcyOTYgMi4wMDcwNCw0LjQ4IDQuNDgsNC40OGg0MC4zMmMyLjQ2NCwwIDQuNDgsLTIuMDE2IDQuNDgsLTQuNDh2LTc2LjE2YzAsLTI4Ljk4NTYgLTE1LjU0OTgsLTU4LjI0IC01MC4yMjUsLTU4LjI0Yy0xNS43Njk2LDAgLTI3LjY4MjIsNi4wOTM4NSAtMzQuODk1LDExLjE1NjI1di02LjY3NjI1YzAsLTIuNDY0IC0yLjAxNiwtNC40OCAtNC40OCwtNC40OHoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg=="/>
+        </a>
+        <a>
+          {/* Google acct */}
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAyMjQgMjI0IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNHYtMjI0aDIyNHYyMjR6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PGcgaWQ9InN1cmZhY2UxIj48cGF0aCBkPSJNMTE2LjQ2MjUsMjE1LjA0Yy01Ni44MjI1LDAgLTEwMy4wNTc1LC00Ni4yMTc1IC0xMDMuMDU3NSwtMTAzLjA0YzAsLTU2LjgyMjUgNDYuMjM1LC0xMDMuMDQgMTAzLjA1NzUsLTEwMy4wNGMyNS43NDI1LDAgNTAuMzgyNSw5LjUzNzUgNjkuNDA1LDI2Ljg2MjVsMy40NjUsMy4xNjc1bC0zMy45ODUsMzMuOTg1bC0zLjE1LC0yLjY5NWMtOS45NzUsLTguNTQgLTIyLjY2MjUsLTEzLjI0NzUgLTM1LjczNSwtMTMuMjQ3NWMtMzAuMzEsMCAtNTQuOTg1LDI0LjY1NzUgLTU0Ljk4NSw1NC45Njc1YzAsMzAuMzEgMjQuNjc1LDU0Ljk2NzUgNTQuOTg1LDU0Ljk2NzVjMjEuODU3NSwwIDM5LjEzLC0xMS4xNjUgNDcuMjY3NSwtMzAuMTg3NWgtNTEuNzQ3NXYtNDYuMzkyNWwxMDEuMDI3NSwwLjE0bDAuNzUyNSwzLjU1MjVjNS4yNjc1LDI1LjAwNzUgMS4wNSw2MS43OTI1IC0yMC4zLDg4LjExMjVjLTE3LjY3NSwyMS43ODc1IC00My41NzUsMzIuODQ3NSAtNzcsMzIuODQ3NXoiPjwvcGF0aD48L2c+PC9nPjwvZz48L3N2Zz4="/>
+        </a>
+        <a>
+          {/* Github acct */}
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAyMjQgMjI0IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNHYtMjI0aDIyNHYyMjR6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTc5LjcwMzY4LDIwOS44MjUyOGMzLjE4NTI4LC0xLjM3MDg4IDUuNDE2MzIsLTQuNTM4MjQgNS40MTYzMiwtOC4yMjUyOHYtMjQuMTkyYzAsLTAuODgyNTYgMC4wNzE2OCwtMS44MDA5NiAwLjE4MzY4LC0yLjczMjhjLTAuMDYyNzIsMC4wMTc5MiAtMC4xMjA5NiwwLjAzMTM2IC0wLjE4MzY4LDAuMDQ0OGMwLDAgLTEzLjQ0LDAgLTE2LjEyOCwwYy02LjcyLDAgLTEyLjU0NCwtMi42ODggLTE1LjIzMiwtOC4wNjRjLTMuMTM2LC01LjgyNCAtNC40OCwtMTUuNjggLTEyLjU0NCwtMjEuMDU2Yy0xLjM0NCwtMC44OTYgLTAuNDQ4LC0yLjI0IDIuMjQsLTIuMjRjMi42ODgsMC40NDggOC41MTIsNC4wMzIgMTIuMDk2LDguOTZjNC4wMzIsNC45MjggOC4wNjQsOC45NiAxNS4yMzIsOC45NmMxMS4xNDE3NiwwIDE3LjExMzYsLTAuNTYgMjAuNzA2NTYsLTIuNDg2NGM0LjE4NDMyLC02LjIyMjcyIDkuOTc2OTYsLTEwLjk1MzYgMTYuMDI5NDQsLTEwLjk1MzZ2LTAuMTEyYy0yNS4zOTI2NCwtMC44MTUzNiAtNDEuNjE0NzIsLTkuMjU1NjggLTQ5LjE2OCwtMjIuMjg4Yy0xNi40MTkyLDAuMTg4MTYgLTMwLjcxNDg4LDEuODE0NCAtMzguODcyOTYsMy4xNjczNmMtMC4yNTk4NCwtMS40NjQ5NiAtMC40ODM4NCwtMi45Mzg4OCAtMC42NzY0OCwtNC40MjE3NmM4LjA1MDU2LC0xLjMyNjA4IDIxLjY5NjY0LC0yLjg5ODU2IDM3LjM4NTYsLTMuMTk4NzJjLTAuNTAxNzYsLTEuMjM2NDggLTAuOTM2MzIsLTIuNTA0MzIgLTEuMzAzNjgsLTMuODAzNTJjLTE1LjcyOTI4LC0wLjc5NzQ0IC0yOS4zMDM2OCwtMC4xNzQ3MiAtMzYuNjc3NzYsMC40MzQ1NmMtMC4wODk2LC0xLjQ4NzM2IC0wLjIxMDU2LC0yLjk3MDI0IC0wLjIyODQ4LC00LjQ3NTUyYzcuMzg3NTIsLTAuNjA0OCAyMC41OTQ1NiwtMS4yMDk2IDM1LjkyMDY0LC0wLjQ5NzI4Yy0wLjM1MzkyLC0yLjI0IC0wLjU4MjQsLTQuNTI5MjggLTAuNTgyNCwtNi45MTI2NGMwLC03LjYxNiAyLjY4OCwtMTUuNjggNy42MTYsLTIyLjRjLTIuMjQsLTcuNjE2IC01LjM3NiwtMjMuNzQ0IDAuODk2LC0yOS41NjhjMTIuMDk2LDAgMjAuNjA4LDUuODI0IDI0LjY0LDkuNDA4YzcuNjExNTIsLTMuMTQwNDggMTYuMTIzNTIsLTQuOTMyNDggMjUuNTMxNTIsLTQuOTMyNDhjOS40MDgsMCAxNy45MiwxLjc5MiAyNS4wODgsNC45MjhjNC4wMzIsLTMuNTg0IDEyLjU0NCwtOS40MDggMjQuNjQsLTkuNDA4YzYuNzIsNi4yNzIgMy4xMzYsMjIuNCAwLjg5NiwyOS41NjhjNC45MjgsNi43MiA3LjYxNiwxNC4zMzYgNy4xNjgsMjIuNGMwLDIuMTY4MzIgLTAuMjAxNiw0LjI2MDQ4IC0wLjQ5MjgsNi4zMTIzMmMxNS42NzU1MiwtMC43NzA1NiAyOS4yNDA5NiwtMC4xNTIzMiAzNi43NTM5MiwwLjQ1Njk2Yy0wLjAwODk2LDEuNTA5NzYgLTAuMTQ3ODQsMi45ODM2OCAtMC4yMjg0OCw0LjQ3NTUyYy03LjQ4NjA4LC0wLjYxODI0IC0yMS4zOTIsLTEuMjU0NCAtMzcuNDQ4MzIsLTAuMzk4NzJjLTAuMzk4NzIsMS41MDUyOCAtMC44ODI1NiwyLjk3MDI0IC0xLjQ1Niw0LjM5MDRjMTUuODg2MDgsMC4yMDYwOCAyOS44NTkyLDEuNzQyNzIgMzguMjk1MDQsMy4wODY3MmMtMC4xOTI2NCwxLjQ4NzM2IC0wLjQxNjY0LDIuOTYxMjggLTAuNjc2NDgsNC40MjE3NmMtOC41NjU3NiwtMS4zNzA4OCAtMjMuMTY2MDgsLTIuOTc0NzIgLTM5Ljc3NzkyLC0zLjA1NTM2Yy03LjQ1OTIsMTIuODkzNDQgLTIzLjM4NTYsMjEuMzAyNCAtNDguMjgwOTYsMjIuMjgzNTJ2MC4xMzg4OGMxMS42NDgsMCAyMi40LDE3LjQ3MiAyMi40LDI5LjU2OHYyNC4xOTJjMCwzLjY4NzA0IDIuMjMxMDQsNi44NTQ0IDUuNDE2MzIsOC4yMjUyOGM0MS4wNDEyOCwtMTMuNTgzMzYgNzAuNzQzNjgsLTUyLjI5MDU2IDcwLjc0MzY4LC05Ny44MjUyOGMwLC01Ni44MTUzNiAtNDYuMjIwMTYsLTEwMy4wNCAtMTAzLjA0LC0xMDMuMDRjLTU2LjgxOTg0LDAgLTEwMy4wNCw0Ni4yMjQ2NCAtMTAzLjA0LDEwMy4wNGMwLDQ1LjUzNDcyIDI5LjcwMjQsODQuMjQxOTIgNzAuNzQzNjgsOTcuODI1Mjh6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="/>
+        </a>
+      </Box>
+      <Box direction="row" alignSelf="center" className="switchBtn" >
+        <Button size="large" primary="true" onClick={() => props.changeScreen('signup')} >
+          I need to Sign Up!
+        </Button>
+      </Box>
     </Box>
   )
 }
